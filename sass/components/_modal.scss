@@ -7,6 +7,9 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 93px 30px;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -14,12 +17,10 @@
   pointer-events: none;
 }
 
-
-
 .modal {
   position: absolute;
-  min-height: 581px;
-  width: 528px;
+  // max-width: 450px;
+  // min-height: 609px;
   background-color: #ffffff;
   top: 50%;
   left: 50%;
@@ -37,6 +38,19 @@
   opacity: 0;
   visibility: hidden;
 }
+  @media screen and (min-width: 480px) 
+  and (max-width: 1199px) {
+    position: absolute;
+    max-width: 450px;
+    width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    min-height: 581px;
+    max-width: 528px;
+    width: 100%;
+  }
+
 }
 
 .modal-close-btn {
@@ -163,6 +177,11 @@ textarea {
   justify-content: flex-end;
   position: relative;
   padding-right: 11px;
+
+  @media screen and (min-width: 480px) 
+    and (max-width: 1199px) {
+    padding-right: 0;
+  }
 }
 
 .checkbox{
@@ -205,10 +224,23 @@ textarea {
     position: absolute;
     top: 4px;
     left: 14px;
+
+      @media screen and (min-width: 480px) 
+    and (max-width: 1199px) {
+    top: -2px;
+    left: 0;
+  }
     }
     .checkbox:focus + & {
     background-color: transparent;
     outline: 1px solid var(--accent-color);
+  }
+  @media screen and (min-width: 480px) 
+    and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-right: 0;
   }
 }
 
@@ -216,8 +248,6 @@ textarea {
     color: var(--accent-color);
     text-decoration: underline;
 }
-
-
 
 .checkbox:checked + .agreement-text::before {
   background-color: var(--accent-color);
@@ -239,4 +269,8 @@ textarea {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   width: 200px;
   font-weight: 700;
+
+  @media screen and (min-width: 480px) {
+    margin: 30px 85px 0;
+  }
 }

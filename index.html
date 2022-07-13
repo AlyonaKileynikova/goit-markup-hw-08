@@ -22,28 +22,61 @@
         <div class="container main-nav">
             <nav class="main-nav">
                 <a href="" class="logo-up"><span class="another-color">Web</span>Studio</a>
-                <ul class="site-nav list">
-                    <li class="item"><a href="" class="nav-link current link">Студия</a></li>
-                    <li class="item"><a href="./portfolio.html" class="nav-link link">Портфолио</a></li>
-                    <li class="item"><a href="" class="nav-link link">Контакты</a></li>
-                </ul>
+                <button type="button" 
+                class="menu-button"
+                aria-expanded="false"
+                aria-controls="menu-cont"
+                data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель моб меню">
+                        <use class="icon-close" href="./images/icons1.svg#icon-mob-close_40px"></use>
+                        <use class="icon-menu" href="./images/icons1.svg#icon-mob-menu_40px"></use>
+                    </svg>
+                </button>
+                <div class="menu-cont" id="menu-cont" data-menu>
+                    <div class="navigation">
+                    <ul class="site-nav list">
+                        <li class="item"><a href="" class="nav-link current link">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="nav-link link">Портфолио</a></li>
+                        <li class="item"><a href="" class="nav-link link">Контакты</a></li>
+                    </ul>
+                    </div>
+                    
+                        <ul class="contacts list">
+                            <li class="contacts-item">
+                            <a href="mailto:info@devstudio.com" class="top-mail-tel link mail-contact">
+                            <svg class="contacts-icon" width="16" height="12">
+                                <use href="./images/icons1.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com</a>
+                            </li>
+                            <li class="contacts-item">
+                            <a href="tel:+380961111111" class="top-mail-tel link mob-contact">
+                            <svg class="contacts-icon" width="10" height="16">
+                                <use href="./images/icons1.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                    
+                    <div class="menu-soc-list">
+                        <ul class="menu-soclist list">
+                            <li class="soclist-item menu-soclist__item">
+                                <a href="" class="soclist-item-link link">Instagram</a>
+                            </li>
+                            <li class="soclist-item menu-soclist__item">
+                                <a href="" class="soclist-item-link link">Twitter</a>
+                            </li>
+                            <li class="soclist-item menu-soclist__item">
+                                <a href="" class="soclist-item-link link">Facebook</a>
+                            </li>
+                            <li class="soclist-item menu-soclist__item">
+                                <a href="" class="soclist-item-link link">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
             </nav>
-            <ul class="contacts list">
-                <li class="contacts-item">
-                <a href="mailto:info@devstudio.com" class="top-mail-tel link">
-                    <svg class="contacts-icon" width="16" height="12">
-                        <use href="./images/icons1.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com</a>
-                </li>
-                <li class="contacts-item">
-                <a href="tel:+380961111111" class="top-mail-tel link">
-                    <svg class="contacts-icon" width="10" height="16">
-                        <use href="./images/icons1.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11</a>
-                </li>
-            </ul>
         </div>
     </header>
     <main>
@@ -102,8 +135,8 @@
             </div>
         </section>
         <!--What we do-->
-        <section class="section">
-            <div class="activity container">
+        <section class="activity section">
+            <div class="container">
                 <h2 class="activity-title">Чем мы занимаемся</h2>
                 <ul class="activity-list">
                 <li class="activity-item">
@@ -337,7 +370,7 @@
         <div class="contacts-enjoy container">
             <div class="contacts-address">            
                 <a href="" class="logo-down"><span class="another-color">Web</span>Studio</a>    
-                <address>
+                <address class="contacts-address__address">
                 <p class="address-title">г. Киев, пр-т Леси Украинки, 26</p>
                 <a href="mailto:info@example.com" class="mail">info@example.com</a> <br>
                 <a href="tel:+380991111111" class="tel">+38 099 111 11 11</a>
@@ -380,12 +413,12 @@
                 <form class="subscribe-form" autocomplete="off">
                     <h2 class="subscribe-text">Подпишитесь на рассылку</h2>
                     <div class="subscribe-wrap">
-                    <input type="text" name="subscribe" class="subscribe-email" placeholder="E-mail" />
-                    <button type="submit" class="subscribe-btn btn link">Подписаться
+                        <input type="text" name="subscribe" class="subscribe-email" placeholder="E-mail" />
+                        <button type="submit" class="subscribe-btn btn link">Подписаться
                             <svg class="telegram-icon" width="24" height="24">
                                 <use href="./images/icons1.svg#icon-icon-telegram-send"></use>
                             </svg>
-                    </button>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -447,5 +480,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

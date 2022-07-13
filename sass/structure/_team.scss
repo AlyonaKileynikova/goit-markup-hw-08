@@ -7,35 +7,56 @@
 .team-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+  @media screen and (min-width: 768px) {
+
+  }
 }  
+
 
 .team-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 0.84;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+
+  @media screen and (min-width: 1600px) {
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 50px;
+  }
+
 }
 
 .team-list__item {
-  width: 270px;
-  height: 428px;
+  width: 100%;
+  height: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: #fff;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
-}
+// .team-list__item:not(:last-child) {
+//   margin-right: 30px;
+// }
 
 .team-item__team-signature {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+  // padding-bottom: 30px;
 }
 
 .team-item__team-name {
@@ -62,16 +83,13 @@
 .social-list__item {
   width: 44px;
   height: 44px;
-  margin-left: 10px;
 }
 
-.social-list__item:first-child {
-  margin-left: 0;
-}
 
 .social-list {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 .social-list__link {
