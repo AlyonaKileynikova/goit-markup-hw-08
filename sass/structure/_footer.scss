@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   @media screen and (min-width: 768px) {
-    // flex-direction: calc(100% );
+    
   }
   @media screen and (min-width: 1200px) {
     margin: 0 auto;
@@ -16,8 +16,11 @@
 
 .contacts-enjoy {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   
   @media screen and (min-width: 480px) {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -31,8 +34,17 @@
   }
 }
 
+.contacts-enjoy .enjoy {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
 .contacts-address {
-  
+  text-align: center;
   @media screen and (min-width: 480px) {
     text-align: center;
   }
