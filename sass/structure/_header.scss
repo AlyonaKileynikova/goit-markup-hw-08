@@ -265,11 +265,11 @@
 .menu-soclist.list {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
-  justify-content: center;
+  // flex-grow: 1;
+  // justify-content: ;
   margin-top: 64px;
   margin-bottom: 48px;
-  
+  margin-right: 84px;
   @media screen and (min-width: 768px) {
   display: none;
   }
@@ -284,15 +284,13 @@
   flex-direction: row;
   align-items: center;
   color: #2196F3;
-  &::after {
-  content: "";
-  display: inline-block;
-  align-items: baseline;
-  left: 214px;
-  top: 726px;
-  width: 22px;
-  height: 0px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
-  }
+}
+
+.menu-soclist__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-soclist__item:not(:first-child) {
+  padding-left: 10px;
 }
